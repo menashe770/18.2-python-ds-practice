@@ -12,6 +12,6 @@ def remove_every_other(lst):
         [1, 2, 3, 4, 5]
     """
 
-    return [lst[::2]]
+    return lst[::2]
 
     # return [val for i, val in enumerate(lst) if i % 2 == 0]
