@@ -29,4 +29,12 @@ def two_list_dictionary(keys, values):
 
     # my solution
 
+    # result = {}
+    # for i in range(len(keys)):
+    #     if i < len(values):
+    #         result[keys[i]] = values[i]
+    #     else:
+    #         result[keys[i]] = None
+    # return result
+
     return {keys[i]: values[i] if i < len(values) else None for i in range(len(keys))}
