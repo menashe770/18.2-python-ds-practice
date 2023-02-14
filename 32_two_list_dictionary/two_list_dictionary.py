@@ -15,12 +15,18 @@ def two_list_dictionary(keys, values):
         {'a': 1, 'b': 2, 'c': 3}
    """
 
-    out = {}
+    # solution 1
+    # out = {}
 
-    for idx, val in enumerate(keys):
-        out[val] = values[idx] if idx < len(values) else None
+    # for idx, val in enumerate(keys):
+    #     out[val] = values[idx] if idx < len(values) else None
 
-    return out
+    # return out
 
+    # solution 2
     # from itertools import zip_longest
     # return dict(zip_longest(keys, values))
+
+    # my solution
+
+    return {keys[i]: values[i] if i < len(values) else None for i in range(len(keys))}
