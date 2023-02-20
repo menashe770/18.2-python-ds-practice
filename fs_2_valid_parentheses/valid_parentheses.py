@@ -22,3 +22,30 @@ def valid_parentheses(parens):
         >>> valid_parentheses(")()(")
         False
     """
+
+    # stack = []
+
+    # for p in parens:
+    #     if p == '(':
+    #         stack.append(p)
+    #     elif p == ')':
+    #         if not stack:
+    #             return False
+    #         else:
+    #             stack.pop()
+
+    # return len(stack) == 0
+
+    count = 0
+
+    for p in parens:
+        if p == '(':
+            count += 1
+        elif p == ')':
+            count -= 1
+
+        # fast fail: too many right parens
+        if count < 0:
+            return False
+
+    return count == 0
