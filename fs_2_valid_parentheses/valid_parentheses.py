@@ -49,3 +49,8 @@ def valid_parentheses(parens):
             return False
 
     return count == 0
+
+    # if parens.count('(') != parens.count(')'):
+    #     return False
+    # else:
+    #     return True
