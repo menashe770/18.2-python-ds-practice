@@ -22,14 +22,14 @@ def reverse_vowels(s):
 
     vowels = set("aeiou")
 
-    string = list(s)
+    string = list(s.lower())
     i = 0
     j = len(s) - 1
 
     while i < j:
-        if string[i].lower() not in vowels:
+        if string[i] not in vowels:
             i += 1
-        elif string[j].lower() not in vowels:
+        elif string[j] not in vowels:
             j -= 1
         else:
             string[i], string[j] = string[j], string[i]
